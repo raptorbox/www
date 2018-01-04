@@ -8,13 +8,14 @@ module.exports = {
 	},
 	output: {
 		filename: "[name].js",
-		path: path.resolve(__dirname, "build")
+		path: path.resolve(__dirname, "build"),
+		publicPath: "/build/",
 	},
 	externals: {},
 	devtool: "source-map",
 	module: {
 		rules: [
-			{test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, loader: 'url-loader?limit=100000'},			
+			{test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, loader: 'url-loader?limit=100000'},
             {
                test: /\.(scss)$/,
                use: [{
