@@ -1,13 +1,12 @@
 header.masthead {
   position: relative;
-  background-color: $gray-800;
-  background: url('../img/bg-masthead.jpg') no-repeat center center;
+  background: url('../img/head1.png') no-repeat center center;
   @include background-cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
   .overlay {
     position: absolute;
-    background-color: $gray-900;
+    background-color: $gray-200;
     height: 100%;
     width: 100%;
     top: 0;
@@ -16,10 +15,11 @@ header.masthead {
   }
   h1 {
     font-size: 2rem;
+    color: $brown1;
   }
   @media (min-width: 768px) {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
     h1 {
       font-size: 3rem;
     }

@@ -4,9 +4,6 @@
     "version": "5.0.0",
     "license": "MIT",
     "author": "Luca Capra",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
     "scripts": {
         "start": "node_modules/.bin/webpack-dev-server --open",
         "build": "node_modules/.bin/webpack"
