@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -40,6 +41,21 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new CopyWebpackPlugin([
+
+			{ from: 'node_modules/font-awesome/css', to: './font-awesome/css' },
+	        { from: 'node_modules/font-awesome/fonts', to: './font-awesome/fonts' },
+
+	        { from: 'node_modules/simple-line-icons/css', to: './simple-line-icons/css' },
+	        { from: 'node_modules/simple-line-icons/fonts', to: './simple-line-icons/fonts' },
+
+	    ], {
+	        ignore: [],
+	        // By default, we only copy modified files during
+	        // a watch or webpack-dev-server build. Setting this
+	        // to `true` copies all files.
+	        copyUnmodified: true
+	    }),
 		new webpack.optimize.UglifyJsPlugin({
 			include: /\.min\.js$/,
 			sourceMap: true,
